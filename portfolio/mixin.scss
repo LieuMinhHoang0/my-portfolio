@@ -1,0 +1,23 @@
+@mixin shape($w, $h, $color: null){
+    width: $w;
+    height: $h;
+    @if $color{
+        background-color: $color;
+    }
+    @content;
+}
+@mixin circle($size, $color: null){
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    @if $color {
+        background-color: $color;
+    }
+    @content;
+}
+@mixin p-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
